@@ -1,7 +1,6 @@
 //Marinica Catalina
 //Grupa 212
 //Proiect1: Tema7
-
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
@@ -115,7 +114,7 @@ friend istream& operator>>(istream& in,DoublyLinkedList& L ){
          do{
             cout<<"Introduceti pozitia pe care vreti sa introduceti nodul (de la 1 pana la "<<L.get_list_size()+1<<"): ";
             cin>>i;
-           }while(i>L.get_list_size()+1);
+           }while(i>L.get_list_size()+1 || i<=0);
 
          cout<<"Introduceti element in lista: ";
          cin>>x;
@@ -253,7 +252,7 @@ int main()
                     do{
                         cout<<"Introduceti pozitia de pe care vreti sa stergeti nodul (de la 1 pana la "<<List[i].get_list_size()<<"): ";
                         cin>>j;
-                      }while(j>List[i].get_list_size()+1);
+                      }while(j>List[i].get_list_size() || j<=0);
                     List[i].DeleteElement(j);
                 }
             else
@@ -276,10 +275,13 @@ int main()
 
     case 4:
         do{
-              cout<<"Introduceti nr listei pe care vreti sa le concatenati( de la 0 pana la "
-                  <<n-1<<" ) : ";
-              cin>>i>>j;
-          } while(i>=n || j>=n);
+              cout<<"Introduceti prima lista( de la 0 pana la "<<n-1<<" ) : ";
+              cin>>i;
+          } while(i>=n);
+        do{
+              cout<<"Introduceti a doua lista( de la 0 pana la "<<n-1<<" ) : ";
+              cin>>j;
+          } while(j>=n);
             Merge(List[i],List[j]);
             break;
     case 5:
@@ -290,10 +292,5 @@ int main()
        }
   }while(choice!=5);
 
-
-
-
-
-    return 0;
+ return 0;
 }
-
