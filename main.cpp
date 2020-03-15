@@ -1,7 +1,6 @@
 //Marinica Catalina
 //Grupa 212
 //Proiect1: Tema7
-//sa inseram toate librariile #include <bits/stdc++.h>
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
